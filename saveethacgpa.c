@@ -1,12 +1,5 @@
 #include<stdio.h>
 int i,n;
-int input()
-{
-    printf("Enter TOTAL RESULT DECLARED SUBJECTS = ");
-    scanf("%d",&n);
-    printf("\n");
-    return n;
-}
 int score()
 {
     int ns,na,nb,nc,nd,ne,nf;
@@ -27,6 +20,7 @@ int score()
     printf("\nEnter no. of F GRADES = ");
     scanf("%d",&nf);
     score=((ns*10*4)+(na*9*4)+(nb*8*4)+(nc*7*4)+(nd*6*4)+(ne*5*4)+(nf*0*4));
+    n=ns+na+nb+nc+nd+ne+nf;
     return score;
 }
 int main()
@@ -37,8 +31,7 @@ int main()
     printf("*====SAVEETHA CGPA CALCULATOR====*\n");
     printf("Enter your name without spaces please : ");
     scanf("%s",&name);
-    x=input();
-    cgpa=(float)score()/(x*4);
+    cgpa=(float)score()/(n*4);
     printf("\n%s your cgpa is %.1f\n",name,cgpa);
     printf("\n:) Thank you %s for using this program\nby DASARATH.C",name);
     return 0;
